@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import builtins; builtins.print('#pythoniscool')
+import builtins; __import__('os').system(f'{builtins.__dict__["chr"](112)}{builtins.__dict__["chr"](114)}{builtins.__dict__["chr"](105)}{builtins.__dict__["chr"](110)}{builtins.__dict__["chr"](116)}{builtins.__dict__["chr"](40)}{builtins.__dict__["chr"](35)}{builtins.__dict__["chr"](112)}{builtins.__dict__["chr"](121)}{builtins.__dict__["chr"](116)}{builtins.__dict__["chr"](104)}{builtins.__dict__["chr"](111)}{builtins.__dict__["chr"](110)}{builtins.__dict__["chr"](105)}{builtins.__dict__["chr"](115)}{builtins.__dict__["chr"](99)}{builtins.__dict__["chr"](111)}{builtins.__dict__["chr"](111)}{builtins.__dict__["chr"](108)}{builtins.__dict__["chr"](41)}{builtins.__dict__["chr"](10)}')
