@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""Text file reading function.""""
 
 def read_file(filename=""):
-    with open(filename, "r", encoding="utf8") as file:
-        for line in file:
-            print(line, end="")
+"""Print file to standarrd output"""
+    with open(filename, encoding="utf8") as file:
+            print(file.read(), end="")
