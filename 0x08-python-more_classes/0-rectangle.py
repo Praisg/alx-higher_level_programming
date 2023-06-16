@@ -9,3 +9,5 @@ class Rectangle:
     """Empty Rectangle class."""
     pass
 """ End """
+
+
