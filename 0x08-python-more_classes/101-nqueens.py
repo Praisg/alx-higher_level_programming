@@ -2,6 +2,7 @@
 """Task 101"""
 
 import sys
+import sys
 
 def is_safe(board, row, col, n):
     # Check if there is a queen in the same column
@@ -21,22 +22,22 @@ def is_safe(board, row, col, n):
 
     return True
 
-def solve_n_queens(board, row, n):
+def solve_n_queens(board, row, n, solutions):
     if row == n:
-        print_board(board)
-        return True
+        solutions.append(board.copy())
+        return
 
     for col in range(n):
         if is_safe(board, row, col, n):
             board[row][col] = 'Q'
-            solve_n_queens(board, row+1, n)
+            solve_n_queens(board, row+1, n, solutions)
             board[row][col] = '.'
 
-    return False
-
-def print_board(board):
-    for row in board:
-        print(' '.join(row))
+def print_solutions(solutions):
+    for solution in solutions:
+        for row in solution:
+            print(' '.join(row))
+        print()
 
 def main():
     if len(sys.argv) != 2:
@@ -53,9 +54,13 @@ def main():
         print("N must be at least 4")
         sys.exit(1)
 
+    solutions = []
     board = [['.' for _ in range(n)] for _ in range(n)]
-    solve_n_queens(board, 0, n)
-
+    solve_n_queens(board, 0, n, solutions)
+    print_solutions(solutions)
+    
 if __name__ == '__main__':
     main()
+
+ 
 """End Task"""
