@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Task 101"""
+import sys
+import sys
 
-import sys
-import sys
 
 def is_safe(board, row, col, n):
     # Check if there is a queen in the same column
@@ -22,9 +22,10 @@ def is_safe(board, row, col, n):
 
     return True
 
+
 def solve_n_queens(board, row, n, solutions):
     if row == n:
-        solutions.append(board.copy())
+        solutions.append([row[:] for row in board])
         return
 
     for col in range(n):
@@ -33,11 +34,13 @@ def solve_n_queens(board, row, n, solutions):
             solve_n_queens(board, row+1, n, solutions)
             board[row][col] = '.'
 
+            
 def print_solutions(solutions):
     for solution in solutions:
         for row in solution:
             print(' '.join(row))
         print()
+        
 
 def main():
     if len(sys.argv) != 2:
@@ -58,9 +61,8 @@ def main():
     board = [['.' for _ in range(n)] for _ in range(n)]
     solve_n_queens(board, 0, n, solutions)
     print_solutions(solutions)
-    
-if __name__ == '__main__':
-    main()
 
- 
+
+if __name__ == '__main__':
+    main() 
 """End Task"""
