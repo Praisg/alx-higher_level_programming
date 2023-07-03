@@ -2,6 +2,5 @@
 """Text file reading function task 0.""""
 
 def read_file(filename=""):
-"""Print file to standarrd output"""
-    with open(filename, encoding="utf8") as file:
-            print(file.read(), end="")
+    with open(filename, mode='r', encoding='utf-8') as f:
+        print(f.read(), end='')
