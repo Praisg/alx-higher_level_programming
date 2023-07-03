@@ -1,10 +1,19 @@
 #!/usr/bin/python3
-"""Reads from standard input
+"""Reads from standard input and computes metrics task 101.
+
+After every ten lines or the input of a keyboard interruption (CTRL + C),
+prints the following statistics:
+    - Total file size up to that point.
+    - Count of read status codes up to that point.
 """
 
 
 def print_stats(size, status_codes):
-    """Print accumulated metrcs
+    """Print accumulated metrics.
+
+    Args:
+        size (int):  read file size.
+        status_codes (dict):  status codes.
     """
     print("File size: {}".format(size))
     for key in sorted(status_codes):
@@ -48,4 +57,3 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print_stats(size, status_codes)
         raise
-
