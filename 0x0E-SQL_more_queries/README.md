@@ -1,1 +1,1 @@
-## Solutions to SQL - More queries tasks
+my sql more querries task
